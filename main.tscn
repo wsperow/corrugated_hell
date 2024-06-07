@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbwi5w3mq7xjw"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_4628e"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_4628e")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -2.0
+offset_right = 319.0
+offset_bottom = 238.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 139.0
+offset_bottom = 125.0
+
+[node name="PlayButton" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[connection signal="pressed" from="Control/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

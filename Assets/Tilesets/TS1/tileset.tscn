@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://3yck0j1lgpra"]
+
+[ext_resource type="PackedScene" uid="uid://c4tp8eb0hb1wd" path="res://Assets/Tilesets/TS1/tileset.glb" id="1_717n5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_flac3"]
+size = Vector3(0.5, 2.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rwb38"]
+size = Vector3(0.5, 2.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o7h8c"]
+size = Vector3(1, 2.5, 0.5)
+
+[node name="tileset" instance=ExtResource("1_717n5")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="doorway_l/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 1.25, 0)
+shape = SubResource("BoxShape3D_flac3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="doorway_r/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 1.25, 0)
+shape = SubResource("BoxShape3D_rwb38")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wall_shelf/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -0.25)
+shape = SubResource("BoxShape3D_o7h8c")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="corner_shelf/StaticBody3D" index="1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.25, 1.25, 0)
+shape = SubResource("BoxShape3D_o7h8c")

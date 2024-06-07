@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwmyc7vg3u34e"]
+
+[ext_resource type="Script" path="res://Scenes/ui.gd" id="1_3gbwm"]
+[ext_resource type="Texture2D" uid="uid://ww7tk22dr5u5" path="res://Assets/Img/crosshair020.png" id="1_p55aa"]
+[ext_resource type="Theme" uid="uid://dxl4kxbkana4x" path="res://Assets/Palettes/foodbar.tres" id="2_w565d"]
+[ext_resource type="Theme" uid="uid://bws878bsxrfk2" path="res://Assets/Palettes/waterbar.tres" id="3_ky3s4"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3gbwm")
+
+[node name="InteractionLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = 102.0
+offset_right = 285.0
+offset_bottom = 191.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Placeholder"
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractionLabel"]
+position = Vector2(-9, -2)
+rotation = -0.785398
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_p55aa")
+
+[node name="FoodBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 114.0
+offset_bottom = 41.0
+theme = ExtResource("2_w565d")
+step = 1.0
+value = 100.0
+
+[node name="WaterBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_top = 46.0
+offset_right = 114.0
+offset_bottom = 73.0
+theme = ExtResource("3_ky3s4")
+step = 1.0
+value = 100.0

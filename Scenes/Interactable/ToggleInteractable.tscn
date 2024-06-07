@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://r0lxl8c3y7tp"]
+
+[ext_resource type="Script" path="res://Scenes/Interactable/ToggleInteractable.gd" id="1_ggfh0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2qdfa"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_podx4"]
+
+[node name="ToggleInteractable" type="StaticBody3D" groups=["Interactable"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_ggfh0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("BoxShape3D_2qdfa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.3, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_podx4")
+skeleton = NodePath("")

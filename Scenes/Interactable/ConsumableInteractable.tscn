@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bru5nc0kml2ed"]
+
+[ext_resource type="Script" path="res://Scenes/Interactable/ConsumableInteractable.gd" id="1_al0gh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_djo1j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vnyfn"]
+
+[node name="Consumable" type="StaticBody3D" groups=["Interactable"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_al0gh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("BoxShape3D_djo1j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.3, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_vnyfn")
